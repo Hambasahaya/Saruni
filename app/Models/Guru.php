@@ -31,4 +31,14 @@ class Guru extends Model
     {
         return $this->hasMany(GuruRole::class);
     }
+
+    public function mapelAssignments(): HasMany
+    {
+        return $this->hasMany(GuruMapelKelas::class);
+    }
+
+    public function waliDari(): HasMany
+    {
+        return $this->hasMany(Kelas::class, 'wali_kelas_id');
+    }
 }
