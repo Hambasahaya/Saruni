@@ -29,4 +29,14 @@ class Kelas extends Model
     {
         return $this->hasMany(GuruMapelKelas::class);
     }
+
+    public function siswas(): HasMany
+    {
+        return $this->hasMany(Siswa::class);
+    }
+
+    public function absensi(): HasMany
+    {
+        return $this->hasMany(AbsensiSiswa::class);
+    }
 }
